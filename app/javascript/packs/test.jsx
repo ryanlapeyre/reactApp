@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {Button} from '@shopify/polaris';
-const Hello = props => (
+const Hello2 = props => (
 
   <DisplayText size="large">Good evening, Dominic.</DisplayText>
 
@@ -12,6 +12,6 @@ const Hello = props => (
 
 // Render component with data
 document.addEventListener('DOMContentLoaded', () => {
-  const node = document.getElementById('hello-react')
-ReactDOM.render(<Hello {...data} />, node)
+  const node = document.getElementById('test')
+ReactDOM.render(<Hello2/>, node)
 })
