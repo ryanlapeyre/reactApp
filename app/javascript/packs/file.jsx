@@ -1,22 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-
+import {Page, Card, Button, Thumbnail} from '@shopify/polaris';
 const Hello = props => (
-  <div>Hello {props.name}!</div>
+<DisplayText size="large">Good evening, Dominic.</DisplayText>
 )
 
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
+    <Hello/>,
+    document.body.appendChild(document.createElement('DisplayText')),
   )
 })
