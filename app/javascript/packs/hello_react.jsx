@@ -6,6 +6,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {Page, Card, Button, Thumbnail} from '@shopify/polaris';
+import {Button} from '@shopify/polaris';
 const Hello = props => (
    <Page title="Products">
     {props.products.map((product, index) => (
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('hello-react')
   const data = JSON.parse(node.getAttribute('data'))
 ReactDOM.render(<Hello {...data} />, node)
+ReactDOM.render(<Button onClick={() => alert('Button clicked!')}>Example button</Button>, domContainerNode);
 })
 
 
