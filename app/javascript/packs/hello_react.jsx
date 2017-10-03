@@ -31,20 +31,12 @@ const Hello = props => (
 
 )
 
-const Hello2 = props => (
-<List>
-  <List.Item>Order #1001 <Caption>Received April 21, 2017</Caption></List.Item>
-  <List.Item>Order #1002 <Caption>Received April 22, 2017</Caption></List.Item>
-</List>
-)
-
 
 // Render component with data
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('hello-react')
   const data = JSON.parse(node.getAttribute('data'))
 ReactDOM.render(<Hello {...data} />, node)
-ReactDOM.render(<Button onClick={() => alert('Button clicked!')}>Example button</Button>, domContainerNode);
 })
 
 

@@ -18,16 +18,7 @@
 </ul>
 
 
-<% content_for :javascript do %>
-  <script type="text/javascript">
-    ShopifyApp.ready(function(){
-      ShopifyApp.Bar.initialize({
-        title: "Home",
-        icon: ""
-      });
-    });
-  </script>
-<% end %>
+
 <%= content_tag :div,
   id: "hello-react",
   data: {
@@ -38,7 +29,7 @@
 <% end %>
 
 
-<DisplayText size="large">Good evening, Dominic.</DisplayText>
+<%= content_tag :div, id: "test" %>
 
 
 
