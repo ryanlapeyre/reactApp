@@ -26,10 +26,13 @@ const Hello = props => (
     </Card>
     ))}
   </Page>
-
-
-
 )
+
+const Hello2 = props =>
+(
+  <DisplayText size="large">Good evening, Dominic.</DisplayText>
+)
+
 
 
 // Render component with data
@@ -37,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('hello-react')
   const data = JSON.parse(node.getAttribute('data'))
 ReactDOM.render(<Hello {...data} />, node)
+    ReactDOM.render(
+    <Hello2/>,
+    document.body.appendChild(document.createElement('div')),
+  )
 })
 
 
