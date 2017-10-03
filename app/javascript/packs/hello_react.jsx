@@ -44,5 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('hello-react')
   const data = JSON.parse(node.getAttribute('data'))
 ReactDOM.render(<Hello {...data} />, node)
-ReactDOM.render(<Hello2/>)
+ReactDOM.render(<Hello2/>, node)
 })
