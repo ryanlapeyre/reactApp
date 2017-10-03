@@ -6,7 +6,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {Page, Card, Button, Thumbnail} from '@shopify/polaris';
-import {Button} from '@shopify/polaris';
 const Hello = props => (
    <Page title="Products">
     {props.products.map((product, index) => (
