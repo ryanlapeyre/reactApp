@@ -4,13 +4,9 @@ import PropTypes from 'prop-types'
 import {Page, Card, Button, Thumbnail} from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
 
-const Hello2 = props => (
-  <DisplayText size="large">Good evening, Dominic.</DisplayText>
-)
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello2 />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+  const domContainerNode = document.getElementById('dev')
+    ReactDOM.render(<Button onClick={() => alert('Button clicked!')}>Example button </Button>, domContainerNode);
+  })
