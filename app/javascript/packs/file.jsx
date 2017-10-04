@@ -6,15 +6,7 @@ import '@shopify/polaris/styles.css';
 
 
 
-
-const Hello2 = props => (
-  <DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>
-
-)
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const domContainerNode = document.getElementById('dev')
-    ReactDOM.render(Hello2, domContainerNode);
+    ReactDOM.render(<DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>, domContainerNode);
   })
