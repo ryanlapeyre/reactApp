@@ -12,12 +12,16 @@
 <%= content_tag :div,
   id: "dev",
   data: {
-    name: 'Person',
-    products: @products,
-    shop_session: @shop_session
+
 }.to_json do %>
 <% end %>
 
+<%= content_tag :test,
+  id: "dev",
+  data: {
+
+}.to_json do %>
+<% end %>
 
 
 <h2>Products</h2>
