@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import '@shopify/polaris/styles.css';
-import React, {Component} from 'react';
 import {
   Layout,
   Page,
