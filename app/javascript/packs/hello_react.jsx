@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {Page, Card, Button, Thumbnail} from '@shopify/polaris';
 const Hello = props => (
+  <div>
    <Page title="Products">
     {props.products.map((product, index) => (
     <Card key={index}
@@ -28,6 +29,7 @@ const Hello = props => (
   </Page>
 
   <DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>
+  </div>
 )
 
 
