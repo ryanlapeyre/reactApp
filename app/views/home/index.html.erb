@@ -11,6 +11,16 @@
 
 <DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>
 
+<%= content_tag :div,
+  id: "test",
+  data: {
+    name: 'Person',
+    products: @products,
+    shop_session: @shop_session
+}.to_json do %>
+<% end %>
+
+
 
 <%= content_tag :div,
   id: "dev",
