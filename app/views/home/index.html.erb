@@ -9,6 +9,17 @@
 <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.6.0/polaris.min.css" />
 
 
+<%= content_tag :div,
+  id: "dev",
+  data: {
+    name: 'Person',
+    products: @products,
+    shop_session: @shop_session
+}.to_json do %>
+<% end %>
+
+
+
 <h2>Products</h2>
 
 <ul>
@@ -29,7 +40,6 @@
 <% end %>
 
 
-<%= content_tag :div, id: "dev" %>
 
 
 
