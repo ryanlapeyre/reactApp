@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import {DatePicker} from '@shopify/polaris';
+import {DisplayText} from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
 
 
