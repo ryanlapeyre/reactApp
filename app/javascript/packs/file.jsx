@@ -10,7 +10,7 @@ const Hello2 = props => (
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Hello2 />,
     document.body.appendChild(document.createElement('div')),
   )
 })
