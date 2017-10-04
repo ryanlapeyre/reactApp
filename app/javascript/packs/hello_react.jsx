@@ -26,6 +26,8 @@ const Hello = props => (
     </Card>
     ))}
   </Page>
+
+  <DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>
 )
 
 

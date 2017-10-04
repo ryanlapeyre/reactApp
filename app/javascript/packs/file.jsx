@@ -8,5 +8,5 @@ import '@shopify/polaris/styles.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   const domContainerNode = document.getElementById('dev')
-    ReactDOM.render(<DisplayText size="extraLarge">Good evening, Dominic.</DisplayText>, domContainerNode);
+    ReactDOM.render(<Button onClick={() => alert('Button clicked!')}>Example button </Button>, domContainerNode);
   })
