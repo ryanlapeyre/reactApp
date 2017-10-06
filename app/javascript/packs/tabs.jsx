@@ -58,8 +58,9 @@ class App extends Component {
       </div>
     );
   }
-
 }
+
+export default App;
 
 document.addEventListener('DOMContentLoaded', () => {
   const domContainerNode = document.getElementById('tabs')
