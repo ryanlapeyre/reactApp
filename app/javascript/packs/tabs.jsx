@@ -10,7 +10,7 @@ import '@shopify/polaris/styles.css';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const domContainerNode = document.getElementById('tab')
+  const domContainerNode = document.getElementById('tabs')
     ReactDOM.render(
 
   <Tabs
