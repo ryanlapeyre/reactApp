@@ -40,7 +40,7 @@ class App extends Component {
       (
         <Tabs.Panel id="panel1">
         <Page title="Products">
-         {props.products.map((product, index) => (
+         {this.props.products.map((product, index) => (
          <Card key={index}
            title={product.title}
            primaryFooterAction={{
