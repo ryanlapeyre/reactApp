@@ -44,7 +44,14 @@
 
 
 
-
+<%= content_tag :div,
+  id: "hello-react",
+  data: {
+    name: 'Person',
+    products: @products,
+    shop_session: @shop_session
+}.to_json do %>
+<% end %>
 
 
 
