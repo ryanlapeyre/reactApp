@@ -63,7 +63,6 @@ class App extends Component {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const data = JSON.parse(node.getAttribute('data'))
   const domContainerNode = document.getElementById('tabs')
-    ReactDOM.render(<App {...data} />, domContainerNode);
+    ReactDOM.render(<App />, domContainerNode);
   })
