@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom'
 import React, { Component } from 'react';
 import {Tabs} from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
