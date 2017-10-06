@@ -19,6 +19,7 @@ class App extends Component {
     this.setState({selectedTab});
   }
 
+
   render() {
     const {selectedTab} = this.state;
 
@@ -43,7 +44,7 @@ class App extends Component {
       ),
       (
         <Tabs.Panel id="panel2">
-          something else
+          <Button onClick={() => alert('Button clicked!')}>Example button </Button>
         </Tabs.Panel>
       ),
     ];
@@ -60,7 +61,6 @@ class App extends Component {
     );
   }
 }
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
