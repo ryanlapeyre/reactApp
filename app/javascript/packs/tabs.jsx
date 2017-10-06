@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 import {Tabs, Page, Card, Button, Thumbnail} from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
@@ -37,7 +38,6 @@ class App extends Component {
     const tabPanels = [
       (
         <Tabs.Panel id="panel1">
-        const Hello = props => (
            <Page title="Products">
             {props.products.map((product, index) => (
             <Card key={index}
@@ -57,7 +57,6 @@ class App extends Component {
             </Card>
             ))}
           </Page>
-        )
         </Tabs.Panel>
       ),
       (
