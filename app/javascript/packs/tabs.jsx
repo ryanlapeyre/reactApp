@@ -55,6 +55,7 @@ class App extends Component {
           selected={selectedTab}
           tabs={tabs}
           onSelect={this.handleTabChange}
+          fitted
         />
         {tabPanels[selectedTab]}
       </div>
@@ -64,6 +65,7 @@ class App extends Component {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const data = JSON.parse(node.getAttribute('data'))
   const domContainerNode = document.getElementById('tabs')
-    ReactDOM.render(<App />, domContainerNode);
+    ReactDOM.render(<App {...data} />, domContainerNode);
   })
