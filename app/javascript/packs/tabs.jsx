@@ -39,25 +39,7 @@ class App extends Component {
     const tabPanels = [
       (
         <Tabs.Panel id="panel1">
-        <Page title="Products">
-         {props.products.map((product, index) => (
-         <Card key={index}
-           title={product.title}
-           primaryFooterAction={{
-             content: 'View',
-             url: 'https://${shop_session.url}/admin/products/${product.id}',
-           }}
-           sectioned
-         >
-             <Thumbnail
-               source={product.images[0].src}
-               alt={product.title}
-               size="large"
-             />
-
-         </Card>
-         ))}
-       </Page>
+          something
         </Tabs.Panel>
       ),
       (
@@ -83,7 +65,7 @@ class App extends Component {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const data = JSON.parse(domContainerNode.getAttribute('data'))
+    const data = JSON.parse(domContainerNode.getAttribute('field'))
   const domContainerNode = document.getElementById('tabs')
     ReactDOM.render(<App {...data} />, domContainerNode);
   })
