@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react';
-import {Tabs} from '@shopify/polaris';
+import {Tabs, Page, Card, Button, Thumbnail} from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
 
 class App extends Component {
@@ -37,7 +37,27 @@ class App extends Component {
     const tabPanels = [
       (
         <Tabs.Panel id="panel1">
-          something
+        const Hello = props => (
+           <Page title="Products">
+            {props.products.map((product, index) => (
+            <Card key={index}
+              title={product.title}
+              primaryFooterAction={{
+                content: 'View',
+                url: 'https://${shop_session.url}/admin/products/${product.id}',
+              }}
+              sectioned
+            >
+                <Thumbnail
+                  source={product.images[0].src}
+                  alt={product.title}
+                  size="large"
+                />
+
+            </Card>
+            ))}
+          </Page>
+        )
         </Tabs.Panel>
       ),
       (
@@ -62,6 +82,7 @@ class App extends Component {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const data = JSON.parse(node.getAttribute('data'))
   const domContainerNode = document.getElementById('tabs')
-    ReactDOM.render(<App />, domContainerNode);
+    ReactDOM.render(<App {...data} />, domContainerNode);
   })
