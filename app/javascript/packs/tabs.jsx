@@ -60,9 +60,8 @@ class App extends Component {
   }
 }
 
-export default App;
 
 document.addEventListener('DOMContentLoaded', () => {
   const domContainerNode = document.getElementById('tabs')
-    ReactDOM.render(App, domContainerNode);
+    ReactDOM.render(<App />, domContainerNode);
   })
