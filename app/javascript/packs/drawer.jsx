@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom'
-import React from 'react';
+import React, { Component } from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
-class DrawerSimpleExample extends React.Component {
+class DrawerSimpleExample extends Component {
 
   constructor(props) {
     super(props);
