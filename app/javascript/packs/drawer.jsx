@@ -7,8 +7,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import React from 'react';
 import Sidebar from 'react-sidebar';
 
-import React from 'react';
-import Sidebar 'react-sidebar';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
