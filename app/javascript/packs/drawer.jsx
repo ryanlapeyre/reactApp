@@ -4,7 +4,6 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import React from 'react';
 import Sidebar from 'react-sidebar';
 
 
