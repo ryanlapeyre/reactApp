@@ -7,14 +7,23 @@ import RaisedButton from 'material-ui/RaisedButton';
 import React from 'react';
 import Sidebar from 'react-sidebar';
 
+import React from 'react';
+import Sidebar 'react-sidebar';
+
+const mql = window.matchMedia(`(min-width: 800px)`);
+
 class App extends React.Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
-      sidebarOpen: false
+      mql: mql,
+      docked: props.docked,
+      open: props.open
     }
 
+    this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
 
@@ -22,12 +31,31 @@ class App extends React.Component {
     this.setState({sidebarOpen: open});
   }
 
+  componentWillMount: function() {
+    mql.addListener(this.mediaQueryChanged);
+    this.setState({mql: mql, sidebarDocked: mql.matches});
+  }
+
+  componentWillUnmount: function() {
+    this.state.mql.removeListener(this.mediaQueryChanged);
+  }
+
+  mediaQueryChanged: function() {
+    this.setState({sidebarDocked: this.state.mql.matches});
+  }
+
   render: function() {
     var sidebarContent = <b>Sidebar content</b>;
+    var sidebarProps = {
+      sidebar: this.state.sidebarOpen,
+      docked: this.state.sidebarDocked,
+      onSetOpen: this.onSetSidebarOpen
+    };
 
     return (
       <Sidebar sidebar={sidebarContent}
                open={this.state.sidebarOpen}
+               docked={this.state.sidebarDocked}
                onSetOpen={this.onSetSidebarOpen}>
         <b>Main content</b>
       </Sidebar>
