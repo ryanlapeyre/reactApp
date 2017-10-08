@@ -4,32 +4,38 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
-class DrawerSimpleExample extends Component {
+import React from 'react';
+import Sidebar from 'react-sidebar';
 
+class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {open: false};
+
+    this.state = {
+      sidebarOpen: false
+    }
+
+    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  onSetSidebarOpen: function(open) {
+    this.setState({sidebarOpen: open});
+  }
 
-  render() {
+  render: function() {
+    var sidebarContent = <b>Sidebar content</b>;
+
     return (
-      <div>
-        <RaisedButton
-          label="Toggle Drawer"
-          onClick={this.handleToggle}
-        />
-        <Drawer open={this.state.open}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
-        </Drawer>
-      </div>
+      <Sidebar sidebar={sidebarContent}
+               open={this.state.sidebarOpen}
+               onSetOpen={this.onSetSidebarOpen}>
+        <b>Main content</b>
+      </Sidebar>
     );
   }
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   const domContainerNode = document.getElementById('drawer')
-    ReactDOM.render( DrawerSimpleExample, domContainerNode);
+    ReactDOM.render( App, domContainerNode);
   })
